@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-function FormRow({ label, error, children }) {
   const StyledFormRow = styled.div`
     display: grid;
     align-items: center;
@@ -37,6 +36,9 @@ function FormRow({ label, error, children }) {
     font-size: 1.4rem;
     color: var(--color-red-700);
   `;
+
+function FormRow({ label, error, children }) {
+
   return (
     <StyledFormRow>
       {label && <Label htmlFor={children.props.id}>{label}</Label>}
